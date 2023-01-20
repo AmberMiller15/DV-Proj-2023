@@ -15,7 +15,7 @@ The intent of this project is to understand traffic accidents in the US.  We wil
 ### Data Sources
 
 
-### Database Strucutre
+### Database Structure
 
 
 
