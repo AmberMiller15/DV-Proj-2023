@@ -8,7 +8,7 @@
 
 ## Purpose
 ### Topic and Rationale
-The intent of this project is to understand traffic accidents in the US.  We will explore correlations in the data to understand factors that contribute to accidents such as the vehicles involved, the drivers, and the location of the incidents. Using this analysis we hope to answer the age old question: What state has the worst drivers? Our rationale for exploring this analysis is to finally resolve this long-debated topic by using data to provide a clear answer.
+The intent of this project is to understand traffic accidents in the US.  We will explore correlations in the data to understand factors that contribute to accidents such as the vehicles involved, the weather, and the location of the incidents. Using this analysis we hope to understand the factors that lead to the most severe accidents for the purpose sharing information that helps drivers to avoid the worst accidents.
 
 
 ## Approach
