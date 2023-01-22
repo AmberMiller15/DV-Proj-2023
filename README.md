@@ -4,7 +4,7 @@
 * Amber Miller (insert contact link)
 * Jacob Jennings (insert contact link)
 * Jessica Lunn (https://www.linkedin.com/in/jessicaannlunn/)
-* Sarah Thieshen (insert contact link)
+* Sarah Thieshen (https://www.linkedin.com/in/sarah-thieshen/)
 
 ## Purpose
 ### Topic and Rationale
