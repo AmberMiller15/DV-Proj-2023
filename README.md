@@ -3,7 +3,7 @@
 ## Team Members
 * Amber Miller (insert contact link)
 * Jacob Jennings (insert contact link)
-* Jessica Lunn (insert contact link)
+* Jessica Lunn (https://www.linkedin.com/in/jessicaannlunn/)
 * Sarah Thieshen (insert contact link)
 
 ## Purpose
