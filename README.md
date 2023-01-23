@@ -1,7 +1,7 @@
 # It's Not an Accident (working title)
 
 ## Team Members
-* Amber Miller (insert contact link)
+* Amber Miller (www.linkedin.com/in/ambermiller15)
 * Jacob Jennings (https://www.linkedin.com/in/jacob-jennings-/)
 * Jessica Lunn (https://www.linkedin.com/in/jessicaannlunn/)
 * Sarah Thieshen (insert contact link)
