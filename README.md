@@ -20,7 +20,7 @@ We plan to use National Highway Trafffic Safety Administration's (NHTSA) 2019 Cr
 
 
 ### Machine Learning Model
-
+The objective of the Machine Learning model is [to determine what factors best predict a serious accident]. We use a [Classification] model rather than Regression because our target variable is discrete. 
 
 
 ## Key Findings
