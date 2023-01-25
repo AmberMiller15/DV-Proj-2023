@@ -20,7 +20,6 @@ The intent for this project is to understand how vehicle body types can determin
 ### Data Sources
 We plan to use National Highway Trafffic Safety Administration's (NHTSA) 2019 Crash Report Sampling System (CRSS). The CRSS is a sample of police-reported crashes that include: motor vehicles, pedestrians, and even cyclists. This data is sampled from roughly 5-6 million police reports from 60 different geographic areas across the United States. (https://www.nhtsa.gov/crash-data-systems/crash-report-sampling-system)
 
-https://public.tableau.com/app/profile/jacob.jennings8168/viz/FinalProject_16746241701870/Dashboard1?publish=yes
 
 ### Database Structure
 
@@ -37,3 +36,7 @@ The objective of the Machine Learning model is [to determine what factors best p
 ## Appendix
 ### Additional Resources
 For more information and state by state accident breakdown : https://www.iihs.org/topics/fatality-statistics/detail/state-by-state#crash-types
+
+Exploring data: https://public.tableau.com/app/profile/jacob.jennings8168/viz/FinalProject_16746241701870/Dashboard1?publish=yes
+
+Body type group rough draft: https://public.tableau.com/app/profile/jacob.jennings8168/viz/FinalProject_16746241701870/Dashboard2?publish=yes
