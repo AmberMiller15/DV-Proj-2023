@@ -26,7 +26,22 @@ We plan to use National Highway Trafffic Safety Administration's (NHTSA) 2019 Cr
 
 
 ### Machine Learning Model
-The objective of the Machine Learning model is [to determine what factors best predict a serious accident]. We use a [Classification] model rather than Regression because our target variable is discrete. 
+The objective of the Machine Learning model is to determine what factors best predict a serious accident and specifically the role vehicle type plays in predicting the severity. We use a Logrithmic Regression model with encoded discrete variables.  
+
+Preliminary ML Model Design
+The preliminary model uses 26 accident-specific variables in an effort to predict the severity of the accident, which uses the following values: Fatal, Suspected Serious Injury, Suspected Minor Injury, Possible Injury, Injured (Unknown Severity), No Apparent Injury, and Unknown/Not Reported. The initial challenges faced include:
+1. Serious injury accidents are rare, but are represented in our data. However the model's ability to predict these outcomes are limited.
+2. Our model is not converging with 400 iterations 
+3. We have encoding with multiple scales that requires indexing
+
+We will work to address these by iterating the model design in several ways.
+- We will explore the use of an alternative classification model.
+- We will use data analysis to eliminate non-value added variables that may be contributing to convergence issues and prediction errors.
+- We will improve the indexing in the model
+
+Other Key Work Outstanding
+- We will update the data with the final data structure aligned and cleaned through our dataase
+- Add vehicle data to the analysis
 
 
 ## Key Findings
