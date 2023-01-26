@@ -1,0 +1,11 @@
+SELECT 
+	
+	"ACCIDENTS"."CASENUM"
+
+FROM 
+
+	"ACCIDENTS"
+	
+FULL OUTER JOIN "Vehicles" 
+
+	ON "ACCIDENTS"."CASENUM" = "Vehicles"."CASENUM";
