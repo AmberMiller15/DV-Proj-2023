@@ -1,4 +1,4 @@
-# It's Not an Accident (working title)
+# It's Not an Accident
 
 ## Team Members
 * Amber Miller (www.linkedin.com/in/ambermiller15)
