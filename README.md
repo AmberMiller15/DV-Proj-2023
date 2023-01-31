@@ -23,7 +23,7 @@ We used National Highway Trafffic Safety Administration's (NHTSA) 2019 Crash Rep
 
 ### Database Structure
 
-The data we utilized from the NHTSA 2019 CRSS was presented in large Excel files. The team first decided which columns from the files were applicable to our focus. From there, an Entity Relationship Diagram (ERD) was created to determine what data was relevant for our questions. To clean the data, irrelevant columns were removed, and reformatting content was required, so it could be properly analyzed. After the data was cleaned, it was imported to create the database on postgreSQL, with pgAdmin4 utilized to create two tables by exporting the ERD information. The two tables were linked by the case number to join the information.
+The data we utilized from the NHTSA 2019 CRSS was presented in large Excel files. The team first decided which columns from the files were applicable to our focus. From there, an Entity Relationship Diagram (ERD) was created to determine what data was relevant for our questions. To clean the data, irrelevant columns were removed, then filtering and reformatting content was required, so it could be properly analyzed. After the data was cleaned, it was imported to create the database on postgreSQL, with pgAdmin4 utilized to create two tables by exporting the ERD information. The two tables were linked by the case number to join the information.
 
 ### Machine Learning Model
 The objective of the Machine Learning model is to determine what factors best predict a serious accident and specifically the role vehicle type plays in predicting the severity. We use a Logrithmic Regression model with encoded discrete variables.  
