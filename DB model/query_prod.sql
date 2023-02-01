@@ -1,5 +1,5 @@
 SELECT 
-	
+
 
 "Vehicles"."CASENUM",
 "Vehicles"."VEH_NO",
@@ -143,4 +143,6 @@ FROM
 	
 INNER JOIN "Vehicles" 
 
-	ON "Accidents"."CASENUM" = "Vehicles"."CASENUM";
+	ON "Accidents"."CASENUM" = "Vehicles"."CASENUM"
+	
+WHERE "Vehicles"."MXVSEV_IM" < 5;
