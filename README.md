@@ -26,10 +26,20 @@ We used National Highway Trafffic Safety Administration's (NHTSA) 2019 Crash Rep
 The data we utilized from the NHTSA 2019 CRSS was presented in large Excel files. The team first decided which columns from the files were applicable to our focus. From there, an Entity Relationship Diagram (ERD) was created to determine what data was relevant for our questions. To clean the data, irrelevant columns were removed, then filtering and reformatting content was required, so it could be properly analyzed. After the data was cleaned, it was imported to create the database on postgreSQL, with pgAdmin4 utilized to create two tables by exporting the ERD information. The two tables were linked by the case number to join the information.
 
 ### Machine Learning Model
-The objective of the Machine Learning model is to determine what factors best predict a serious accident and specifically the role vehicle type plays in predicting the severity. We use a Logrithmic Regression model with encoded discrete variables.  
+The objective of the Machine Learning model is to predict serious accidents using accident and vehicle data to determine what factors best predict a serious accident and specifically the role vehicle type plays in predicting the severity. We use a Classification model (Random Forest method) with encoded discrete variables.  As a part of this exercise, three variations of our model were created to understand the different accuracy under scenarios with different variables. These models are our (1)core model (accident_ml.ipynb), our model with (2)no vehicle data (accident_no_veh_ml.ipynb), and our model using an imputed (3)binary variable representing serious and fatal accidents (accident_ml_binary.ipynb).  These versions are described in more detail below.
 
-Preliminary ML Model Design
-The preliminary model uses 26 accident-specific variables in an effort to predict the severity of the accident, which uses the following values: Fatal, Suspected Serious Injury, Suspected Minor Injury, Possible Injury, Injured (Unknown Severity), No Apparent Injury, and Unknown/Not Reported. The initial challenges faced include:
+#### Design Rationale
+
+
+
+(1) Core Model
+The core model uses 58 accident and vehicle variables in an effort to predict the severity of the accident. The severity of the accident is represented by an encoded variable which uses the following values: Fatal(4), Suspected Serious Injury(3), Suspected Minor Injury(2), Possible Injury(1), and No Apparent Injury(0). 
+
+
+
+
+
+. The initial challenges faced include:
 1. Serious injury accidents are rare, but are represented in our data. However the model's ability to predict these outcomes are limited.
 2. Our model is not converging with 400 iterations 
 3. We have encoding with multiple scales that requires indexing
