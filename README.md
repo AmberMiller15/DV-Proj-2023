@@ -18,12 +18,12 @@ The intent for this project is to understand how vehicle body types can determin
  
 ## Approach
 ### Data Sources
-We plan to use National Highway Trafffic Safety Administration's (NHTSA) 2019 Crash Report Sampling System (CRSS). The CRSS is a sample of police-reported crashes that include: motor vehicles, pedestrians, and even cyclists. This data is sampled from roughly 5-6 million police reports from 60 different geographic areas across the United States. (https://www.nhtsa.gov/crash-data-systems/crash-report-sampling-system)
+We used National Highway Trafffic Safety Administration's (NHTSA) 2019 Crash Report Sampling System (CRSS). The CRSS is a sample of police-reported crashes that include: motor vehicles, pedestrians, and even cyclists. This data is sampled from roughly 5-6 million police reports from 60 different geographic areas across the United States. (https://www.nhtsa.gov/crash-data-systems/crash-report-sampling-system)
 
 
 ### Database Structure
 
-
+The data we utilized from the NHTSA 2019 CRSS was presented in large Excel files. The team first decided which columns from the files were applicable to our focus. From there, an Entity Relationship Diagram (ERD) was created to determine what data was relevant for our questions. To clean the data, irrelevant columns were removed, then filtering and reformatting content was required, so it could be properly analyzed. After the data was cleaned, it was imported to create the database on postgreSQL, with pgAdmin4 utilized to create two tables by exporting the ERD information. The two tables were linked by the case number to join the information.
 
 ### Machine Learning Model
 The objective of the Machine Learning model is to determine what factors best predict a serious accident and specifically the role vehicle type plays in predicting the severity. We use a Logrithmic Regression model with encoded discrete variables.  
@@ -40,7 +40,7 @@ We will work to address these by iterating the model design in several ways.
 - We will improve the indexing in the model
 
 Other Key Work Outstanding
-- We will update the data with the final data structure aligned and cleaned through our dataase
+- We will update the data with the final data structure aligned and cleaned through our database
 - Add vehicle data to the analysis
 
 
@@ -49,6 +49,11 @@ Other Key Work Outstanding
 
 
 ## Appendix
+### Presentations
+January 25 Update Presentation:  https://docs.google.com/presentation/d/1NF9oe1QxJYiu_8N8k_AI97wcNYMQnN-bLninww34CDM/edit#slide=id.g1fc34cc6fd9_0_47
+
+Final Presentation Storyboard:https://docs.google.com/presentation/d/18lHaoRxjXg3tlfUCewJTLqfA5zdFtMB4ntkWbTeGUn4/edit#slide=id.p
+
 ### Additional Resources
 For more information and state by state accident breakdown : https://www.iihs.org/topics/fatality-statistics/detail/state-by-state#crash-types
 
