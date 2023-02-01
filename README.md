@@ -30,29 +30,23 @@ The objective of the Machine Learning model is to predict serious accidents usin
 
 #### Design Rationale
 
+##### Data Preprocessing
+As a general rule, we worked to avoid preprocessing data in the ML model itself in order to enable the data cleaning to occur in the database. However, there was a limited amount of preprocessing done in the model as the model design was iterated. We preprocessed data in the model in two instances. First, removing data records where the accident severity was not determined. Because the severity of accidents is not known, it would not be possible to add to the predictive value or address our key questions with those records. Second, we created the binary variable for the binary version of the model, which is described below. This was done in the model to ensure that we could control for differences in the model in order to have a valid comparison between the two approaches.
 
+##### Random Forest Selection
+The decision to use a Random Forest Classification model was driven by three factors. First, it allowed us to avoid rescaling our variables. Our data set contained a large number of nonlinear variable that were already encoded. However, they used varying scales from binary (e.g., yes or no) to having hundreds of values (e.g., unique vehicle models). Second, it handles outliers and non linear data. None of our variables are linear and many of our variables had values that occurred rarely. Third, our dataset is not balanced with higher severity accidents occuring in lower numbers. Recognizing this as a key issue in testing early model alternatives, we wanted to ensure this did not present a predictive issues.
 
-(1) Core Model
-The core model uses 58 accident and vehicle variables in an effort to predict the severity of the accident. The severity of the accident is represented by an encoded variable which uses the following values: Fatal(4), Suspected Serious Injury(3), Suspected Minor Injury(2), Possible Injury(1), and No Apparent Injury(0). 
+The major drawback of the Random Forrest Classification model is that it is a black box. This meant that a single model would not allow us to explore our key question as to the role vehicle types play in predicting serious accidents. This resulted in an approach using multiple models where we could compare the prediction accuracy to draw insights in this area.
 
+##### Oversampling
+As indicated above, out dataset is not balanced with fatal accidents occuring representing 2.6% of the unique accidents and other serious injuries accounting for another 11.7%. As a result, we used an oversampling methodology. To evaluate whether this added value beyond simply using a Random Forrest model, we A/B tested the model with and without using the resampled data. While oversampling did not improve the overall accuracy of the model, it did improve recall for higher severity predictions, meaning it reduced the the instances where high severity accidents were predicted at lower severity levels.
 
+#### Model Variations
+(1) Core Model - The core model uses 58 accident and vehicle variables in an effort to predict the severity of the accident. The severity of the accident is represented by an encoded variable which uses the following values: Fatal(4), Suspected Serious Injury(3), Suspected Minor Injury(2), Possible Injury(1), and No Apparent Injury(0). 
 
+(2) No Vehicle Data Model - This model uses 16 accident variables and excludes any vehicle-specific variables in an effort to predict the severity of the accident. The severity of the accident is represented by the same encoded variable as the core model. 
 
-
-. The initial challenges faced include:
-1. Serious injury accidents are rare, but are represented in our data. However the model's ability to predict these outcomes are limited.
-2. Our model is not converging with 400 iterations 
-3. We have encoding with multiple scales that requires indexing
-
-We will work to address these by iterating the model design in several ways.
-- We will explore the use of an alternative classification model.
-- We will use data analysis to eliminate non-value added variables that may be contributing to convergence issues and prediction errors.
-- We will improve the indexing in the model
-
-Other Key Work Outstanding
-- We will update the data with the final data structure aligned and cleaned through our database
-- Add vehicle data to the analysis
-
+(3) Binary Model - The binary model uses the same 58 accident and vehicle variables as the core model in an effort to predict the severity of the accident. The severity of the accident is represented by a binary variable that is translated from the original severity variable. In this case the severity levels of 3 and 4 are represented as a severe accident (binary variable =1) and values of 0, 1, and 2 are represented as not a sever accident (binary variable =0). 
 
 ## Key Findings
 
