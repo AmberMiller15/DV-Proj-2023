@@ -41,6 +41,9 @@ The major drawback of the Random Forrest Classification model is that it is a bl
 #### Oversampling
 As indicated above, out dataset is not balanced with fatal accidents occuring representing 2.6% of the unique accidents and other serious injuries accounting for another 11.7%. As a result, we used an oversampling methodology. To evaluate whether this added value beyond simply using a Random Forrest model, we A/B tested the model with and without using the resampled data. While oversampling did not improve the overall accuracy of the model, it did improve recall for higher severity predictions, meaning it reduced the the instances where high severity accidents were predicted at lower severity levels.
 
+#### Training Data
+
+
 ### Model Variations
 (1) Core Model - The core model uses 58 accident and vehicle variables in an effort to predict the severity of the accident. The severity of the accident is represented by an encoded variable which uses the following values: Fatal(4), Suspected Serious Injury(3), Suspected Minor Injury(2), Possible Injury(1), and No Apparent Injury(0). 
 
