@@ -23,7 +23,9 @@ We used National Highway Trafffic Safety Administration's (NHTSA) 2019 Crash Rep
 
 ## Database Structure
 
-The data we utilized from the NHTSA 2019 CRSS was presented in large Excel files. The team first decided which columns from the files were applicable to our focus. From there, an Entity Relationship Diagram (ERD) was created to determine what data was relevant for our questions. To clean the data, irrelevant columns were removed, then filtering and reformatting content was required, so it could be properly analyzed. After the data was cleaned, it was imported to create the database on postgreSQL, with pgAdmin4 utilized to create two tables by exporting the ERD information. The two tables were linked by the case number to join the information and then a third table was created from the joined data.
+The data we utilized from the NHTSA 2019 CRSS was presented in large Excel files. The team first decided which columns from the files were applicable to our focus. From there, an Entity Relationship Diagram (ERD) was created to determine what data was relevant for our questions. To clean the data, irrelevant columns were removed, then filtering and reformatting content was required, so it could be properly analyzed. After the data was cleaned, it was imported to create the database on postgreSQL, with pgAdmin4 utilized to create two tables by exporting the ERD information. The two tables were linked by the case number to join the information and then a third table was created from the joined data. 
+
+We hosted our database on Amazon Web Services (AWS) Relational Database Service (RDS) to have a publically accessible database to integrate into our other platforms. This is hosted using a DB.T2.Micro Instance, utilizing Amazon's 20GB of stoage, 12 month, free-tier. 
 
 ## Machine Learning Model
 The objective of the Machine Learning model is to predict serious accidents using accident and vehicle data to determine what factors best predict a serious accident and specifically the role vehicle type plays in predicting the severity. We use a Classification model (Random Forest method) with encoded discrete variables.  As a part of this exercise, three variations of our model were created to understand the different accuracy under scenarios with different variables. These models are our (1)core model (accident_ml.ipynb), our model with (2)no vehicle data (accident_no_veh_ml.ipynb), and our model using an imputed (3)binary variable representing serious and fatal accidents (accident_ml_binary.ipynb).  These versions are described in more detail below.
@@ -65,5 +67,7 @@ Final Presentation Storyboard:https://docs.google.com/presentation/d/18lHaoRxjXg
 For more information and state by state accident breakdown : https://www.iihs.org/topics/fatality-statistics/detail/state-by-state#crash-types
 
 Exploring data: https://public.tableau.com/views/FinalProjectDashboard_16752985716440/SummaryDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+
+Final Dashboard: https://public.tableau.com/views/FinalProjectDashboard-Final/VehicleDataHitRunandRollover?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
 
 Body type group rough draft: https://public.tableau.com/app/profile/jacob.jennings8168/viz/FinalProject_16746241701870/Dashboard2?publish=yes
