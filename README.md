@@ -29,7 +29,7 @@ We hosted our database on Amazon Web Services (AWS) Relational Database Service 
 
 
 ## Dashboard
-The goal for our dashboard is to effectively visualize our sample data to help our viewers identify correlations in our data. To do so, we created our dashboard in Tableau Public to since it allows for simple graph creation especially with a large dataset. The only limitation to our dashboard is that you can not connect Tableau Public directly to a database since they only allows local files and Google Sheets.
+The goal for our dashboard is to effectively visualize our sample data to help our viewers identify correlations in our data. To do so, we created our dashboard in Tableau Public since it allows for simple graph creation especially with a large dataset. The only limitation to our dashboard is that you can not connect Tableau Public directly to a database since they only allows local files and Google Sheets.
 
 
 ## Machine Learning Model
