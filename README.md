@@ -12,7 +12,7 @@ The intent of this project is to understand traffic accidents in the US.  We wil
 
 The intent for this project is to understand how vehicle body types can determine the serverity of accidents in the US. We plan to explore the correlations that contribute to accidents that we've segmented into driver, external, and road factors:
 
-    - Driver factors: was there alcohol involved, did the driver have a trailor attached, etc?
+    - Driver factors: was there alcohol involved, did the driver have a trailor attached, etc.
     - External factors: Time of day (day/night), week, month, weather conditions.
     - Road factors: speed limit, zoning, location on road. 
  
