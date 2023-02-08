@@ -60,7 +60,11 @@ Our dataset was split into 80% training data and 20% test data.  While there are
 
 # Key Findings
 
+Overall, the methodology 
 
+
+Model Fit Comparison
+https://github.com/AmberMiller15/DV-Proj-2023/blob/Jessica1258/ML%20Model/Model%20Fit%20Comparison.png
 
 
 # Appendix
