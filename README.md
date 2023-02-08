@@ -18,12 +18,12 @@ The intent for this project is to understand how vehicle body types can determin
  
 # Approach
 ## Data Sources
-We used National Highway Trafffic Safety Administration's (NHTSA) 2019 Crash Report Sampling System (CRSS). The CRSS is a sample of police-reported crashes that include: motor vehicles, pedestrians, and even cyclists. This data is sampled from roughly 5-6 million police reports from 60 different geographic areas across the United States. (https://www.nhtsa.gov/crash-data-systems/crash-report-sampling-system)
+We used National Highway Trafffic Safety Administration's (NHTSA) 2020 Crash Report Sampling System (CRSS). The CRSS is a sample of police-reported crashes that include: motor vehicles, pedestrians, and even cyclists. This data is sampled from roughly 5-6 million police reports from 60 different geographic areas across the United States. (https://www.nhtsa.gov/crash-data-systems/crash-report-sampling-system)
 
 
 ## Database Structure
 
-The data we utilized from the NHTSA 2019 CRSS was presented in large Excel files. The team first decided which columns from the files were applicable to our focus. From there, an Entity Relationship Diagram (ERD) was created to determine what data was relevant for our questions. To clean the data, irrelevant columns were removed, then filtering and reformatting content was required, so it could be properly analyzed. After the data was cleaned, it was imported to create the database on postgreSQL, with pgAdmin4 utilized to create two tables by exporting the ERD information. The two tables were linked by the case number to join the information and then a third table was created from the joined data. 
+The data we utilized from the NHTSA 2020 CRSS was presented in large Excel files. The team first decided which columns from the files were applicable to our focus. From there, an Entity Relationship Diagram (ERD) was created to determine what data was relevant for our questions. To clean the data, irrelevant columns were removed, then filtering and reformatting content was required, so it could be properly analyzed. After the data was cleaned, it was imported to create the database on postgreSQL, with pgAdmin4 utilized to create two tables by exporting the ERD information. The two tables were linked by the case number to join the information and then a third table was created from the joined data. 
 
 We hosted our database on Amazon Web Services (AWS) Relational Database Service (RDS) to have a publicly accessible database to integrate into our other platforms. This is hosted using a DB.T2.Micro Instance, utilizing Amazon's 20GB of storage, 12 months, free-tier. 
 
