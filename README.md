@@ -49,7 +49,7 @@ The major drawback of the Random Forrest Classification model is that it is a bl
 As indicated above, out dataset is not balanced with fatal accidents occuring representing 2.6% of the unique accidents and other serious injuries accounting for another 11.7%. As a result, we used an oversampling methodology. To evaluate whether this added value beyond simply using a Random Forrest model, we A/B tested the model with and without using the resampled data. While oversampling did not improve the overall accuracy of the model, it did improve recall for higher severity predictions, meaning it reduced the the instances where high severity accidents were predicted at lower severity levels.
 
 #### Training Data
-
+Our dataset was split into 80% training data and 20% test data.  While there are numerous different positions on the correct split of training and test data sets, our main trade off was having enough serious accidents in each data set to train the model and to test the outcome. As a result, we selected a split in the middle of various ranges that parties recommend (ranging from mid-60%s to 90%). Further we avoided using formulaic approaches based on the number of variables because we were evaluating models with differing numbers of variables.
 
 ### Model Variations
 (1) Core Model - The core model uses 58 accident and vehicle variables in an effort to predict the severity of the accident. The severity of the accident is represented by an encoded variable which uses the following values: Fatal(4), Suspected Serious Injury(3), Suspected Minor Injury(2), Possible Injury(1), and No Apparent Injury(0). 
@@ -60,20 +60,29 @@ As indicated above, out dataset is not balanced with fatal accidents occuring re
 
 # Key Findings
 
+All three models did not perform well. In terms of accuracy, the Binary Model performed best (accuracy = 0.88) compared to the Core Model (accuracy = 0.55) and the No Vehicle Data Model (accuracy = 0.41). The limited improvement of the Core Model over the No Vehicle Data Model suggests that vehicle data does add some predictive value in determining the overall severity of injuries. However, the core question of predicting severe injuries [Fatal(4) and Suspected Serious Injury(3)] requires a look deeper at Recall for these variables. Recall is a focus because the most important factor in predicting high severity injuries is avoiding false negatives (i.e. instances of a severe injury that are predicted not to be severe).  In this area, all models performed poorly with recall scores for high severity values randing from 0.11 to 0.32. The model fit comparison below shows the relevant metrics for each model.
 
+Model Fit Comparison
+![Model Fit Comparison](https://github.com/AmberMiller15/DV-Proj-2023/blob/Jessica1258/ML%20Model/Model%20Fit%20Comparison.png)
 
+With additional time and resources, we would consider the following opportunity areas for additional modeling and analysis.
+1) Consider additional model variations including using other ensemble classification models.
+2) Expand data to include additional data (e.g. driver, impairment, violations) from the National Highway Traffic Safety Administration.
+3) Collect broader vehicle driving data on vehicle use for comparative purposes.
+4) Explore data from other years to control for the potential that 2020 is an outlier. 
 
 # Appendix
-## Presentations
-January 25 Update Presentation:  https://docs.google.com/presentation/d/1NF9oe1QxJYiu_8N8k_AI97wcNYMQnN-bLninww34CDM/edit#slide=id.g1fc34cc6fd9_0_47
+## Presentations & Dashboards
 
-Final Presentation Storyboard: https://public.tableau.com/app/profile/jacob.jennings8168/viz/FinalProjectDashboard-Final/VehicleDataHitRunandRollover
+Final Presentation: https://public.tableau.com/app/profile/jacob.jennings8168/viz/FinalProjectDashboard-Final/VehicleDataHitRunandRollover
+
+Final Dashboard: https://public.tableau.com/views/FinalProjectDashboard-Final/VehicleDataHitRunandRollover?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
 
 ## Additional Resources
 For more information and state by state accident breakdown : https://www.iihs.org/topics/fatality-statistics/detail/state-by-state#crash-types
 
 Exploring data: https://public.tableau.com/views/FinalProjectDashboard_16752985716440/SummaryDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
 
-Final Dashboard: https://public.tableau.com/views/FinalProjectDashboard-Final/VehicleDataHitRunandRollover?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+
 
 Body type group rough draft: https://public.tableau.com/app/profile/jacob.jennings8168/viz/FinalProject_16746241701870/Dashboard2?publish=yes
