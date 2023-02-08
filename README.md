@@ -33,7 +33,7 @@ The goal for our dashboard is to effectively visualize our sample data to help o
 
 
 ## Machine Learning Model
-The objective of the Machine Learning model is to predict serious accidents using accident and vehicle data to determine what factors best predict a serious accident and specifically the role vehicle type plays in predicting the severity. We use a Classification model (Random Forest method) with encoded discrete variables.  As a part of this exercise, three variations of our model were created to understand the different accuracy under scenarios with different variables. These models are our (1)core model (accident_ml.ipynb), our model with (2)no vehicle data (accident_no_veh_ml.ipynb), and our model using an imputed (3)binary variable representing serious and fatal accidents (accident_ml_binary.ipynb).  These versions are described in more detail below.
+The objective of the Machine Learning model is to predict serious accidents using accident and vehicle data to determine what factors best predict a serious accident and specifically the role vehicle type plays in predicting the severity. We use a Classification model (Random Forest method) with encoded discrete variables.  As a part of this exercise, three variations of our model were created to understand the different accuracy under scenarios with different variables. These models are our (1) core model (accident_ml.ipynb), our model with (2) no vehicle data (accident_no_veh_ml.ipynb), and our model using an imputed (3) binary variable representing serious and fatal accidents (accident_ml_binary.ipynb).  These versions are described in more detail below.
 
 ### Design Rationale
 
