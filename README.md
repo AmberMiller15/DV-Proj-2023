@@ -27,6 +27,11 @@ The data we utilized from the NHTSA 2020 CRSS was presented in large Excel files
 
 We hosted our database on Amazon Web Services (AWS) Relational Database Service (RDS) to have a publicly accessible database to integrate into our other platforms. This is hosted using a DB.T2.Micro Instance, utilizing Amazon's 20GB of storage, 12 months, free-tier. 
 
+
+## Dashboard
+The goal for our dashboard is to effectively visualize our sample data to help our viewers identify correlations in our data. To do so, we created our dashboard in Tableau Public to since it allows for simple graph creation especially with a large dataset. The only limitation to our dashboard is that you can not connect Tableau Public directly to a database since they only allows local files and Google Sheets.
+
+
 ## Machine Learning Model
 The objective of the Machine Learning model is to predict serious accidents using accident and vehicle data to determine what factors best predict a serious accident and specifically the role vehicle type plays in predicting the severity. We use a Classification model (Random Forest method) with encoded discrete variables.  As a part of this exercise, three variations of our model were created to understand the different accuracy under scenarios with different variables. These models are our (1)core model (accident_ml.ipynb), our model with (2)no vehicle data (accident_no_veh_ml.ipynb), and our model using an imputed (3)binary variable representing serious and fatal accidents (accident_ml_binary.ipynb).  These versions are described in more detail below.
 
@@ -57,11 +62,12 @@ As indicated above, out dataset is not balanced with fatal accidents occuring re
 
 
 
+
 # Appendix
 ## Presentations
 January 25 Update Presentation:  https://docs.google.com/presentation/d/1NF9oe1QxJYiu_8N8k_AI97wcNYMQnN-bLninww34CDM/edit#slide=id.g1fc34cc6fd9_0_47
 
-Final Presentation Storyboard:https://docs.google.com/presentation/d/18lHaoRxjXg3tlfUCewJTLqfA5zdFtMB4ntkWbTeGUn4/edit#slide=id.p
+Final Presentation Storyboard: https://public.tableau.com/app/profile/jacob.jennings8168/viz/FinalProjectDashboard-Final/VehicleDataHitRunandRollover
 
 ## Additional Resources
 For more information and state by state accident breakdown : https://www.iihs.org/topics/fatality-statistics/detail/state-by-state#crash-types
