@@ -60,12 +60,16 @@ Our dataset was split into 80% training data and 20% test data.  While there are
 
 # Key Findings
 
-Overall, the methodology 
-
+All three models did not perform well. In terms of accuracy, the Binary Model performed best (accuracy = 0.88) compared to the Core Model (accuracy = 0.55) and the No Vehicle Data Model (accuracy = 0.41). The limited improvement of the Core Model over the No Vehicle Data Model suggests that vehicle data does add some predictive value in determining the overall severity of injuries. However, the core question of predicting severe injuries [Fatal(4) and Suspected Serious Injury(3)] requires a look deeper at Recall for these variables. Recall is a focus because the most important factor in predicting high severity injuries is avoiding false negatives (i.e. instances of a severe injury that are predicted not to be severe).  In this area, all models performed poorly with recall scores for high severity values randing from 0.11 to 0.32. The model fit comparison below shows the relevant metrics for each model.
 
 Model Fit Comparison
 https://github.com/AmberMiller15/DV-Proj-2023/blob/Jessica1258/ML%20Model/Model%20Fit%20Comparison.png
 
+With additional time and resources, we would consider the following opportunity areas for additional modeling and analysis.
+1) Consider additional model variations including using other ensemble classification models.
+2) Expand data to include additional data (e.g. driver, impairment, violations) from the National Highway Traffic Safety Administration.
+3) Collect broader vehicle driving data on vehicle use for comparative purposes.
+4) Explore data from other years to control for the potential that 2020 is an outlier. 
 
 # Appendix
 ## Presentations & Dashboards
