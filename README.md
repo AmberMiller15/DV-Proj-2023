@@ -74,7 +74,7 @@ With additional time and resources, we would consider the following opportunity 
 # Appendix
 ## Presentations & Dashboards
 
-Final Presentation: https://public.tableau.com/app/profile/jacob.jennings8168/viz/FinalProjectDashboard-Final/VehicleDataHitRunandRollover
+Final Presentation: https://docs.google.com/presentation/d/18lHaoRxjXg3tlfUCewJTLqfA5zdFtMB4ntkWbTeGUn4/edit#slide=id.p
 
 Final Dashboard: https://public.tableau.com/views/FinalProjectDashboard-Final/VehicleDataHitRunandRollover?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
 
